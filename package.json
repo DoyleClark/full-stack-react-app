@@ -8,6 +8,9 @@
     "client": "npm start --prefix client",
     "server": "nodemon server"
   },
+
+  "proxy": "http://localhost:5000",
+  
   "author": "Doyle Clark",
   "license": "ISC",
   "repository": {
@@ -23,6 +26,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "pg": "^8.5.1",
