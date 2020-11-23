@@ -1,11 +1,13 @@
 const request = require('request-promise');
 
-const API_KEY = '162a44148c08fcc52ed209eca6e23a1d';
+require('dotenv').config();
+
+//const API_KEY = '';
 
 class Weather{
     static retrieveByCity(city, callback){
         request({
-            url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=imperial`,
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.WEATHER_API_KEY}&units=imperial`,
             json: true
         }).then(function(res){
             callback(res)
